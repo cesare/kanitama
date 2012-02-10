@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120210171918) do
+ActiveRecord::Schema.define(:version => 20120210180658) do
+
+  create_table "bios", :force => true do |t|
+    t.integer  "host_id"
+    t.date     "bios_release_date"
+    t.string   "bios_vendor"
+    t.string   "bios_version"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "bios", ["host_id", "bios_vendor"], :name => "index_bios_on_host_id_and_bios_vendor"
+
+  create_table "bioses", :force => true do |t|
+    t.integer  "host_id"
+    t.date     "bios_release_date"
+    t.string   "bios_vendor"
+    t.string   "bios_version"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "hosts", :force => true do |t|
     t.string   "ipaddress",  :null => false

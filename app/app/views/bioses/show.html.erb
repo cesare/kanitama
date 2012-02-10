@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Host:</b>
+  <%= @bios.host_id %>
+</p>
+
+<p>
+  <b>Bios release date:</b>
+  <%= @bios.bios_release_date %>
+</p>
+
+<p>
+  <b>Bios vendor:</b>
+  <%= @bios.bios_vendor %>
+</p>
+
+<p>
+  <b>Bios version:</b>
+  <%= @bios.bios_version %>
+</p>
+
+
+<%= link_to 'Edit', edit_bios_path(@bios) %> |
+<%= link_to 'Back', bioses_path %>

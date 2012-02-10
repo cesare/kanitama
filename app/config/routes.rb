@@ -1,4 +1,6 @@
 Kanitama::Application.routes.draw do
+  resources :bioses
+
   resources :hosts
 
   # The priority is based upon order of creation:
