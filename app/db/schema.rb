@@ -14,10 +14,12 @@
 ActiveRecord::Schema.define(:version => 20120210171918) do
 
   create_table "hosts", :force => true do |t|
-    t.string   "ipaddress"
-    t.string   "name"
+    t.string   "ipaddress",  :null => false
+    t.string   "name",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "hosts", ["ipaddress", "name"], :name => "index_hosts_on_ipaddress_and_name"
 
 end
