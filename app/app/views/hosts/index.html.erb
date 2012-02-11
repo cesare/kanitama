@@ -7,6 +7,7 @@
     <th>Bios Vendor</th>
 	<th>Processor Manifacture</th>
 	<th>Processor Speed</th>
+	<th>Baseboard</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +20,7 @@
 	<td><% if host.bios != nil %><%= host.bios.bios_vendor %><% end %></td>
 	<td><% if host.processor != nil %><%= host.processor.processor_manufacturer %><% end %></td>
 	<td><% if host.processor != nil %><%= host.processor.processor_max_speed %><% end %></td>
+	<td><% if host.baseboard != nil %><%= host.baseboard.baseboard_product_name %><% end %></td>
     <td><%= link_to 'Show', host %></td>
     <td><%= link_to 'Edit', edit_host_path(host) %></td>
     <td><%= link_to 'Destroy', host, confirm: 'Are you sure?', method: :delete %></td>
