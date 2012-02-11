@@ -14,7 +14,11 @@ class HostsController < ApplicationController
       .or(processor[:processor_version].matches(keyword))
     
     @hosts = Host.joins(:bios, :baseboard, :processor).where(query)
-    render :index
+    
+    respond_to do |format|
+      format.html # search.html.erb
+      format.json { render json: @hosts }
+    end
   end
   
   
