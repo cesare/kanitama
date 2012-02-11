@@ -1,7 +1,7 @@
 class HostsController < ApplicationController
   def search
     @keyword = "%#{params[:q]}%"
-    @hosts = Host.where('name like ?', @keyword)
+    @hosts = Host.where('name like :keyword OR ipaddress like :keyword', { :keyword => @keyword })
     render :index
   end
   
