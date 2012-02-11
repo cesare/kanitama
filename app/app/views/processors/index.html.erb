@@ -13,8 +13,6 @@
     <th>Processor core count</th>
     <th>Processor core enabled</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
   </thead>
 
@@ -30,12 +28,13 @@
     <td><%= processor.processor_core_count %></td>
     <td><%= processor.processor_core_enabled %></td>
     <td><%= link_to 'Show', processor %></td>
-    <td><%= link_to 'Edit', edit_processor_path(processor) %></td>
-    <td><%= link_to 'Destroy', processor, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
+<<<<<<< HEAD
 
 <%= link_to 'New Processor', new_processor_path, {:class => 'btn'} %>
+=======
+>>>>>>> 9167c1ba0f1ab924ab40b38e7dc021fa0343b985
