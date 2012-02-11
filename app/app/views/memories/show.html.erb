@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Baseboard:</b>
+  <%= @memory.baseboard_id %>
+</p>
+
+<p>
+  <b>Memory size:</b>
+  <%= @memory.memory_size %>
+</p>
+
+<p>
+  <b>Memory speed:</b>
+  <%= @memory.memory_speed %>
+</p>
+
+<p>
+  <b>Memory type:</b>
+  <%= @memory.memory_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_memory_path(@memory) %> |
+<%= link_to 'Back', memories_path %>

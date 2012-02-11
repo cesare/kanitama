@@ -1,4 +1,6 @@
 Kanitama::Application.routes.draw do
+  resources :memories
+
   resources :baseboards
 
   resources :processors
