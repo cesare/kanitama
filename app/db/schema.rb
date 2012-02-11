@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211055312) do
+ActiveRecord::Schema.define(:version => 20120211055803) do
 
   create_table "baseboards", :force => true do |t|
     t.integer  "host_id"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20120211055312) do
     t.boolean  "active_flag"
   end
 
+  add_index "hosts", ["active_flag"], :name => "index_hosts_on_active_flag"
   add_index "hosts", ["ipaddress", "name"], :name => "index_hosts_on_ipaddress_and_name"
 
   create_table "memories", :force => true do |t|
