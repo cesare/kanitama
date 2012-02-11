@@ -1,4 +1,11 @@
 class HostsController < ApplicationController
+  def search
+    @keyword = "%#{params[:q]}%"
+    @hosts = Host.where('name like ?', @keyword)
+    render :index
+  end
+  
+  
   # GET /hosts
   # GET /hosts.json
   def index

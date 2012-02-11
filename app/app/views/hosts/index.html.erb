@@ -14,6 +14,12 @@
     <th></th>
   </tr>
 
+<%= form_tag(search_hosts_path, :method => :get) do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <% @hosts.each do |host| %>
   <tr>
     <td><%= host.ipaddress %></td>
