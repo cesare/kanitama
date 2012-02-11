@@ -3,6 +3,8 @@ require 'capistrano/ext/multistage'
 require 'capistrano_colors'
 require 'bundler/capistrano'
 
+load 'deploy/assets'
+
 set :application, "kanitama"
 set :scm, :git
 set :repository, "git://github.com/cesare/kanitama.git"
