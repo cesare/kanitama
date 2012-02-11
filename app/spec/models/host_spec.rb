@@ -38,5 +38,11 @@ describe Host do
       it { should_not be_valid }
       it { should have(1).errors_on(:ipaddress) }
     end
+    
+    context "if ipaddresses collide" do
+      let(:existing_host) { Factory.create(:host1) }
+      subject { Host.new(:name => 'test-name2', :ipaddress => existing_host.ipaddress) }
+      it { should_not be_valid }
+    end
   end
 end
