@@ -1,137 +1,104 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @host.name %>
-</p>
-
-<p>
-  <b>IP address:</b>
-  <%= @host.ipaddress %>
-</p>
+<h2><%= @host.name %></h2>
 
 <div>
-  <p>BIOS</p>
+  <dl>
+    <dt>Name:</dt>
+    <dd><%= @host.name %></dd>
+
+    <dt>IP address:</dt>
+    <dd><%= @host.ipaddress %></dd>
+  </dl>
+</div>
+
+<div>
+  <h3>BIOS</h3>
   <% if @host.bios %>
-  <p>
-    <b>release date:</b>
-    <%= @host.bios.bios_release_date %>
-  </p>
-  <p>
-    <b>vendor:</b>
-    <%= @host.bios.bios_vendor %>
-  </p>
-  <p>
-    <b>version:</b>
-    <%= @host.bios.bios_version %>
-  </p>
+  <dl>
+    <dt>release date:</dt>
+    <dd><%= @host.bios.bios_release_date %></dd>
+    
+    <dt>vendor:</dt>
+    <dd><%= @host.bios.bios_vendor %></dd>
+    
+    <dt>version:</dt>
+    <dd><%= @host.bios.bios_version %></dd>
+  </dl>
   <% end %>
 </div>
 
 <div>
-  <p>Processor</p>
+  <h3>Processor</h3>
   <% if @host.processor %>
-  <p>
-    <b>Processor family:</b>
-    <%= @host.processor.processor_family %>
-  </p>
-
-  <p>
-    <b>Processor version:</b>
-    <%= @host.processor.processor_version %>
-  </p>
-
-  <p>
-    <b>Processor signature:</b>
-    <%= @host.processor.processor_signature %>
-  </p>
-
-  <p>
-    <b>Processor manufacturer:</b>
-    <%= @host.processor.processor_manufacturer %>
-  </p>
-
-  <p>
-    <b>Processor max speed:</b>
-    <%= @host.processor.processor_max_speed %>
-  </p>
-
-  <p>
-    <b>Processor:</b>
-    <%= @host.processor.processor_id %>
-  </p>
-
-  <p>
-    <b>Processor core count:</b>
-    <%= @host.processor.processor_core_count %>
-  </p>
-
-  <p>
-    <b>Processor core enabled:</b>
-    <%= @host.processor.processor_core_enabled %>
-  </p>
+  <dl>
+    <dt>Processor family:</dt>
+    <dd><%= @host.processor.processor_family %></dd>
+    
+    <dt>Processor version:</dt>
+    <dd><%= @host.processor.processor_version %></dd>
+    
+    <dt>Processor signature:</dt>
+    <dd><%= @host.processor.processor_signature %></dd>
+    
+    <dt>Processor manufacturer:</dt>
+    <dd><%= @host.processor.processor_manufacturer %></dd>
+    
+    <dt>Processor max speed:</dt>
+    <dd><%= @host.processor.processor_max_speed %></dd>
+    
+    <dt>Processor core count:</dt>
+    <dd><%= @host.processor.processor_core_count %></dd>
+    
+    <dt>Processor core enabled:</dt>
+    <dd><%= @host.processor.processor_core_enabled %></dd>
+  </dl>
   <% end %>
 </div>
 
 <div>
-  <p>Baseboard</p>
+  <h3>Baseboard</h3>
   <% if @host.baseboard %>
-  <p>
-    <b>Baseboard product name:</b>
-    <%= @host.baseboard.baseboard_product_name %>
-  </p>
-
-  <p>
-    <b>Baseboard serial number:</b>
-    <%= @host.baseboard.baseboard_serial_number %>
-  </p>
-
-  <p>
-    <b>Baseboard version:</b>
-    <%= @host.baseboard.baseboard_version %>
-  </p>
-
-  <p>
-    <b>Baseboard description:</b>
-    <%= @host.baseboard.baseboard_description %>
-  </p>
-
-  <p>
-    <b>System uuid:</b>
-    <%= @host.baseboard.system_uuid %>
-  </p>
-
-  <p>
-    <b>Memory maximum capacity:</b>
-    <%= @host.baseboard.memory_maximum_capacity %>
-  </p>
-
-  <p>
-    <b>Memory number of devices:</b>
-    <%= @host.baseboard.memory_number_of_devices %>
-  </p>
+  <dl>
+    <dt>Baseboard product name:</dt>
+    <dd><%= @host.baseboard.baseboard_product_name %></dd>
+    
+    <dt>Baseboard serial number:</dt>
+    <dd><%= @host.baseboard.baseboard_serial_number %></dd>
+    
+    <dt>Baseboard version:</dt>
+    <dd><%= @host.baseboard.baseboard_version %></dd>
+    
+    <dt>Baseboard description:</dt>
+    <dd><%= @host.baseboard.baseboard_description %></dd>
+    
+    <dt>System uuid:</dt>
+    <dd><%= @host.baseboard.system_uuid %></dd>
+    
+    <dt>Memory maximum capacity:</dt>
+    <dd><%= @host.baseboard.memory_maximum_capacity %></dd>
+    
+    <dt>Memory number of devices:</dt>
+    <dd><%= @host.baseboard.memory_number_of_devices %></dd>
+  </dl>
   <% end %>
 </div>
 
 <div>
-  <p>Memories</p>
+  <h3>Memories</h3>
   <% if @host.baseboard %>
   <%   @host.baseboard.memories.each_with_index do |memory, i| %>
-  <p>Memory <%= i + 1 %></p>
-  <p>
-    <b>Memory size:</b>
-    <%= memory.memory_size %>
-  </p>
-
-  <p>
-    <b>Memory speed:</b>
-    <%= memory.memory_speed %>
-  </p>
-
-  <p>
-    <b>Memory type:</b>
-    <%= memory.memory_type %>
-  </p>
+  <h4>Memory <%= i + 1 %></h4>
+  <dl>
+    <dt>Memory size:</dt>
+    <dd><%= memory.memory_size %></dd>
+    
+    <dt>Memory speed:</dt>
+    <dd><%= memory.memory_speed %></dd>
+    
+    <dt>Memory type:</dt>
+    <dd><%= memory.memory_type %></dd>
+  </dl>
   <%   end %>
   <% end %>
 </div>
