@@ -8,6 +8,7 @@
 	<th>Processor Manifacture</th>
 	<th>Processor Speed</th>
 	<th>Baseboard</th>
+	<th>Memory</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,6 +22,11 @@
 	<td><% if host.processor != nil %><%= host.processor.processor_manufacturer %><% end %></td>
 	<td><% if host.processor != nil %><%= host.processor.processor_max_speed %><% end %></td>
 	<td><% if host.baseboard != nil %><%= host.baseboard.baseboard_product_name %><% end %></td>
+	<td><% if host.baseboard != nil && host.baseboard.memories != nil
+			 host.baseboard.memories.each do |memory|%>
+		<%= memory.memory_size %>,
+		<% end %>
+	<% end %></td>
     <td><%= link_to 'Show', host %></td>
     <td><%= link_to 'Edit', edit_host_path(host) %></td>
     <td><%= link_to 'Destroy', host, confirm: 'Are you sure?', method: :delete %></td>
