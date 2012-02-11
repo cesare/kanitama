@@ -9,4 +9,14 @@
 
  * サーバのハードウェア情報をクロールしてDBにぶっこむ
  * それを検索・表示するUI
- * それをコマンドからでも叩けるようなWebAPI 
+ * それをコマンドからでも叩けるようなWebAPI
+
+
+チームかにたま
+-----------
+
+ * @cesare
+ * @myfinder
+ * @ichigotake
+ * @yokatsuki
+ * @yoozoosato
