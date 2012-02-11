@@ -3,6 +3,8 @@ name 'Kanitama-Crawler';
 all_from 'lib/Kanitama/Crawler.pm';
 
 # requires '';
+requires 'DBI';
+requires 'Parse::DMIDecode';
 
 tests 't/*.t';
 author_tests 'xt';
