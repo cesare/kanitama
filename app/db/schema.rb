@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211055803) do
+ActiveRecord::Schema.define(:version => 20120211072856) do
 
   create_table "baseboards", :force => true do |t|
-    t.integer  "host_id"
+    t.integer  "host_id",                  :null => false
     t.string   "baseboard_product_name"
     t.string   "baseboard_serial_number"
     t.string   "baseboard_version"
@@ -26,14 +26,18 @@ ActiveRecord::Schema.define(:version => 20120211055803) do
     t.datetime "updated_at",               :null => false
   end
 
+  add_index "baseboards", ["host_id"], :name => "index_baseboards_on_host_id", :unique => true
+
   create_table "bioses", :force => true do |t|
-    t.integer  "host_id"
+    t.integer  "host_id",           :null => false
     t.date     "bios_release_date"
     t.string   "bios_vendor"
     t.string   "bios_version"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
+
+  add_index "bioses", ["host_id"], :name => "index_bioses_on_host_id", :unique => true
 
   create_table "hosts", :force => true do |t|
     t.string   "ipaddress",   :null => false
@@ -56,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20120211055803) do
   end
 
   create_table "processors", :force => true do |t|
-    t.integer  "host_id"
+    t.integer  "host_id",                :null => false
     t.string   "processor_family"
     t.string   "processor_version"
     t.string   "processor_signature"
@@ -68,5 +72,7 @@ ActiveRecord::Schema.define(:version => 20120211055803) do
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
   end
+
+  add_index "processors", ["host_id"], :name => "index_processors_on_host_id", :unique => true
 
 end
