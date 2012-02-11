@@ -1,13 +1,20 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  host_id: 1
+phoenix01:
+  id: 1
   bios_release_date: 2012-02-11
-  bios_vendor: MyString
-  bios_version: MyString
-
-two:
+  bios_vendor: phoenix
+  bios_version: '1'
   host_id: 1
-  bios_release_date: 2012-02-11
-  bios_vendor: MyString
-  bios_version: MyString
+
+phoenix02:
+  id: 2
+  bios_release_date: 2011-08-08
+  bios_vendor: phoenix
+  bios_version: '1'
+  host_id: 2
+
+phoenix03:
+  id: 3
+  bios_release_date: 2009-04-17
+  bios_vendor: phoenix
+  bios_version: '1'
+  host_id: 3

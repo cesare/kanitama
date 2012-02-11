@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211010040) do
+ActiveRecord::Schema.define(:version => 20120211015639) do
 
   create_table "baseboards", :force => true do |t|
     t.integer  "host_id"
@@ -44,13 +44,22 @@ ActiveRecord::Schema.define(:version => 20120211010040) do
 
   add_index "hosts", ["ipaddress", "name"], :name => "index_hosts_on_ipaddress_and_name"
 
+  create_table "memories", :force => true do |t|
+    t.integer  "baseboard_id"
+    t.string   "memory_size"
+    t.string   "memory_speed"
+    t.string   "memory_type"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "processors", :force => true do |t|
     t.integer  "host_id"
     t.string   "processor_family"
     t.string   "processor_version"
     t.string   "processor_signature"
     t.string   "processor_manufacturer"
-    t.integer  "processor_max_speed"
+    t.string   "processor_max_speed"
     t.string   "processor_id"
     t.integer  "processor_core_count"
     t.integer  "processor_core_enabled"

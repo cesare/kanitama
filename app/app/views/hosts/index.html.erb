@@ -4,21 +4,38 @@
   <thead>
   <tr>
     <th>Name</th>
-    <th>Ipaddress</th>
-    <th>Baseboard</th>
-    <th>Bios</th>
-    <th>Processor</th>
-    <th>Memory</th>
+    <th>Bios Vendor</th>
+	<th>Processor Manifacture</th>
+	<th>Processor Speed</th>
+	<th>Baseboard</th>
+	<th>Memory</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
   </thead>
+
+<%= form_tag(search_hosts_path, :method => :get) do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q, params[:q]) %>
+  <%= submit_tag("Search", {:class => 'btn'}) %>
+<% end %>
 
 <% @hosts.each do |host| %>
   <tr>
     <td><%= host.name %></td>
-    <td><%= host.ipaddress %></td>
-    <td><%= host.bios %></td>
-    <td><%= host.processors %></td>
-    <td><%= host.memory %></td>
+	<td><% if host.bios != nil %><%= host.bios.bios_vendor %><% end %></td>
+	<td><% if host.processor != nil %><%= host.processor.processor_manufacturer %><% end %></td>
+	<td><% if host.processor != nil %><%= host.processor.processor_max_speed %><% end %></td>
+	<td><% if host.baseboard != nil %><%= host.baseboard.baseboard_product_name %><% end %></td>
+	<td><% if host.baseboard != nil && host.baseboard.memories != nil
+			 host.baseboard.memories.each do |memory|%>
+		<%= memory.memory_size %>,
+		<% end %>
+	<% end %></td>
+    <td><%= link_to 'Show', host %></td>
+    <td><%= link_to 'Edit', edit_host_path(host) %></td>
+    <td><%= link_to 'Destroy', host, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

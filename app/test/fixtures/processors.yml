@@ -1,23 +1,35 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
+core_i7_01:
+  id: 1
   host_id: 1
-  processor_family: MyString
-  processor_version: MyString
-  processor_signature: MyString
-  processor_manufacturer: MyString
-  processor_max_speed: 1
-  processor_id: MyString
-  processor_core_count: 1
-  processor_core_enabled: 1
+  processor_core_count: 4
+  processor_core_enabled: 4
+  processor_family: Core i7
+  processor_id: A7 06 02 00 FF FB EB BF
+  processor_manufacturer: Intel(R) Corp.
+  processor_max_speed: 3800 MHz
+  processor_signature: Type 0, Family 6, Model 42, Stepping 7
+  processor_version: Intel(R) Core(TM) i7-2700K CPU @ 3.50GHz
 
-two:
-  host_id: 1
-  processor_family: MyString
-  processor_version: MyString
-  processor_signature: MyString
-  processor_manufacturer: MyString
-  processor_max_speed: 1
-  processor_id: MyString
-  processor_core_count: 1
-  processor_core_enabled: 1
+core_i7_02:
+  id: 2
+  host_id: 2
+  processor_core_count: 4
+  processor_core_enabled: 4
+  processor_family: Core i7
+  processor_id: A7 06 02 00 FF FB EB BF
+  processor_manufacturer: Intel(R) Corp.
+  processor_max_speed: 3800 MHz
+  processor_signature: Type 0, Family 6, Model 42, Stepping 7
+  processor_version: Intel(R) Core(TM) i7-2700K CPU @ 3.50GHz
+
+core_i7_03:
+  id: 3
+  host_id: 3
+  processor_core_count: 4
+  processor_core_enabled: 4
+  processor_family: Core i7
+  processor_id: A7 06 02 00 FF FB EB BF
+  processor_manufacturer: Intel(R) Corp.
+  processor_max_speed: 3800 MHz
+  processor_signature: Type 0, Family 6, Model 42, Stepping 7
+  processor_version: Intel(R) Core(TM) i7-2700K CPU @ 3.50GHz

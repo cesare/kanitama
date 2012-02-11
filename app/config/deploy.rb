@@ -3,15 +3,16 @@ require 'capistrano/ext/multistage'
 require 'capistrano_colors'
 require 'bundler/capistrano'
 
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+load 'deploy/assets'
 
+set :application, "kanitama"
 set :scm, :git
 set :repository, "git://github.com/cesare/kanitama.git"
 set :deploy_subdir, "app"
 
 set :stages, %w(infrapp)
 
+set :normalize_asset_timestamps, false
 
 class RemoteCacheSubdir < Capistrano::Deploy::Strategy::RemoteCache
   private

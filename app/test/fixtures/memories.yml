@@ -1,0 +1,13 @@
+memory_01:
+  id: 1
+  baseboard_id: 1
+  memory_size: 2GB
+  memory_speed: '100'
+  memory_type: よいメモリ
+
+memory_02:
+  id: 2
+  baseboard_id: 2
+  memory_size: 4GB
+  memory_speed: '100'
+  memory_type: よいメモリ
