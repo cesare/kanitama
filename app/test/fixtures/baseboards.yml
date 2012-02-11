@@ -1,21 +1,32 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
+DQ67OW_01:
+  id: 1
   host_id: 1
-  baseboard_product_name: MyString
-  baseboard_serial_number: MyString
-  baseboard_version: MyString
-  baseboard_description: MyString
-  system_uuid: MyString
-  memory_maximum_capacity: MyString
-  memory_number_of_devices: 1
+  baseboard_description: pretty nice board!
+  baseboard_product_name: DQ67OW
+  baseboard_serial_number: BQOW1300044B
+  baseboard_version: AAG12528-308
+  memory_maximum_capacity: '4'
+  memory_number_of_devices: 2
+  system_uuid: uuid
 
-two:
-  host_id: 1
-  baseboard_product_name: MyString
-  baseboard_serial_number: MyString
-  baseboard_version: MyString
-  baseboard_description: MyString
-  system_uuid: MyString
-  memory_maximum_capacity: MyString
-  memory_number_of_devices: 1
+DQ67OW_02:
+  id: 2
+  host_id: 2
+  baseboard_description: pretty nice board!
+  baseboard_product_name: DQ67OW
+  baseboard_serial_number: BQOW1300044B
+  baseboard_version: AAG12528-308
+  memory_maximum_capacity: '4'
+  memory_number_of_devices: 2
+  system_uuid: uuid
+
+DQ67OW_03:
+  id: 3
+  host_id: 3
+  baseboard_description: pretty nice board!
+  baseboard_product_name: DQ67OW
+  baseboard_serial_number: BQOW1300044B
+  baseboard_version: AAG12528-308
+  memory_maximum_capacity: '4'
+  memory_number_of_devices: 2
+  system_uuid: uuid

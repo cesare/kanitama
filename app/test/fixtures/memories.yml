@@ -1,13 +1,13 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
+memory_01:
+  id: 1
   baseboard_id: 1
-  memory_size: MyString
-  memory_speed: MyString
-  memory_type: MyString
+  memory_size: 2GB
+  memory_speed: '100'
+  memory_type: よいメモリ
 
-two:
-  baseboard_id: 1
-  memory_size: MyString
-  memory_speed: MyString
-  memory_type: MyString
+memory_02:
+  id: 2
+  baseboard_id: 2
+  memory_size: 4GB
+  memory_speed: '100'
+  memory_type: よいメモリ
