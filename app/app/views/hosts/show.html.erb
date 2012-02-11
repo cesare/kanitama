@@ -1,15 +1,107 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Ipaddress:</b>
-  <%= @host.ipaddress %>
-</p>
+<h2><%= @host.name %></h2>
 
-<p>
-  <b>Name:</b>
-  <%= @host.name %>
-</p>
+<div>
+  <dl>
+    <dt>Name:</dt>
+    <dd><%= @host.name %></dd>
 
+    <dt>IP address:</dt>
+    <dd><%= @host.ipaddress %></dd>
+  </dl>
+</div>
+
+<div>
+  <h3>BIOS</h3>
+  <% if @host.bios %>
+  <dl>
+    <dt>release date:</dt>
+    <dd><%= @host.bios.bios_release_date %></dd>
+    
+    <dt>vendor:</dt>
+    <dd><%= @host.bios.bios_vendor %></dd>
+    
+    <dt>version:</dt>
+    <dd><%= @host.bios.bios_version %></dd>
+  </dl>
+  <% end %>
+</div>
+
+<div>
+  <h3>Processor</h3>
+  <% if @host.processor %>
+  <dl>
+    <dt>Processor family:</dt>
+    <dd><%= @host.processor.processor_family %></dd>
+    
+    <dt>Processor version:</dt>
+    <dd><%= @host.processor.processor_version %></dd>
+    
+    <dt>Processor signature:</dt>
+    <dd><%= @host.processor.processor_signature %></dd>
+    
+    <dt>Processor manufacturer:</dt>
+    <dd><%= @host.processor.processor_manufacturer %></dd>
+    
+    <dt>Processor max speed:</dt>
+    <dd><%= @host.processor.processor_max_speed %></dd>
+    
+    <dt>Processor core count:</dt>
+    <dd><%= @host.processor.processor_core_count %></dd>
+    
+    <dt>Processor core enabled:</dt>
+    <dd><%= @host.processor.processor_core_enabled %></dd>
+  </dl>
+  <% end %>
+</div>
+
+<div>
+  <h3>Baseboard</h3>
+  <% if @host.baseboard %>
+  <dl>
+    <dt>Baseboard product name:</dt>
+    <dd><%= @host.baseboard.baseboard_product_name %></dd>
+    
+    <dt>Baseboard serial number:</dt>
+    <dd><%= @host.baseboard.baseboard_serial_number %></dd>
+    
+    <dt>Baseboard version:</dt>
+    <dd><%= @host.baseboard.baseboard_version %></dd>
+    
+    <dt>Baseboard description:</dt>
+    <dd><%= @host.baseboard.baseboard_description %></dd>
+    
+    <dt>System uuid:</dt>
+    <dd><%= @host.baseboard.system_uuid %></dd>
+    
+    <dt>Memory maximum capacity:</dt>
+    <dd><%= @host.baseboard.memory_maximum_capacity %></dd>
+    
+    <dt>Memory number of devices:</dt>
+    <dd><%= @host.baseboard.memory_number_of_devices %></dd>
+  </dl>
+  <% end %>
+</div>
+
+<div>
+  <h3>Memories</h3>
+  <% if @host.baseboard %>
+  <%   @host.baseboard.memories.each_with_index do |memory, i| %>
+  <h4>Memory <%= i + 1 %></h4>
+  <dl>
+    <dt>Memory size:</dt>
+    <dd><%= memory.memory_size %></dd>
+    
+    <dt>Memory speed:</dt>
+    <dd><%= memory.memory_speed %></dd>
+    
+    <dt>Memory type:</dt>
+    <dd><%= memory.memory_type %></dd>
+  </dl>
+  <%   end %>
+  <% end %>
+</div>
 
 <%= link_to 'Edit', edit_host_path(@host) %> |
 <%= link_to 'Back', hosts_path %>

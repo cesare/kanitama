@@ -11,3 +11,37 @@
  *= require_self
  *= require_tree .
 */
+
+
+#wrapper {
+}
+
+/* Header */
+header {
+    }
+    header h1 {
+        margin-bottom:20px;
+    }
+    /* Top menu */
+    #top_menu {
+        margin:0;
+        padding:0;
+    }
+
+#navbar {
+  background-color:white;
+}
+
+/* Content */
+#content {
+    margin:20px auto;
+}
+
+/* Footer */
+footer {
+    color:gray;
+    text-align:right;
+}
+
+
+

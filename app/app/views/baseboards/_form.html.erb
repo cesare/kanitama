@@ -12,36 +12,68 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :host_id %><br />
-    <%= f.number_field :host_id %>
+    <div class="clearfix">
+    <%= f.label :host_id %>
+      <div class="input">
+      <%= f.number_field :host_id %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :baseboard_product_name %><br />
-    <%= f.text_field :baseboard_product_name %>
+    <div class="clearfix">  
+    <%= f.label :baseboard_product_name %>
+      <div class="input">
+      <%= f.text_field :baseboard_product_name %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :baseboard_serial_number %><br />
-    <%= f.text_field :baseboard_serial_number %>
+    <div class="clearfix">
+    <%= f.label :baseboard_serial_number %>
+      <div class="input">
+      <%= f.text_field :baseboard_serial_number %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :baseboard_version %><br />
-    <%= f.text_field :baseboard_version %>
+    <div class="clearfix">
+    <%= f.label :baseboard_version %>
+      <div class="input">
+      <%= f.text_field :baseboard_version %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :baseboard_description %><br />
-    <%= f.text_field :baseboard_description %>
+    <div class="clearfix">
+    <%= f.label :baseboard_description %>
+      <div class="input">
+      <%= f.text_field :baseboard_description %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :system_uuid %><br />
-    <%= f.text_field :system_uuid %>
+    <div class="clearfix">
+    <%= f.label :system_uuid %>
+      <div class="input">
+      <%= f.text_field :system_uuid %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :memory_maximum_capacity %><br />
-    <%= f.text_field :memory_maximum_capacity %>
+    <div class="clearfix">
+    <%= f.label :memory_maximum_capacity %>
+      <div class="input">
+      <%= f.text_field :memory_maximum_capacity %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :memory_number_of_devices %><br />
-    <%= f.number_field :memory_number_of_devices %>
+    <div class="clearfix">
+    <%= f.label :memory_number_of_devices %>
+      <div class="input">
+      <%= f.number_field :memory_number_of_devices %>
+      </div>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>

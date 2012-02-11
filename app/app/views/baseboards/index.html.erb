@@ -1,6 +1,7 @@
 <h1>Listing baseboards</h1>
 
-<table>
+<table class="table table-striped table-bordered">
+  <thead>
   <tr>
     <th>Host</th>
     <th>Baseboard product name</th>
@@ -11,9 +12,8 @@
     <th>Memory maximum capacity</th>
     <th>Memory number of devices</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
+  </thead>
 
 <% @baseboards.each do |baseboard| %>
   <tr>
@@ -26,12 +26,8 @@
     <td><%= baseboard.memory_maximum_capacity %></td>
     <td><%= baseboard.memory_number_of_devices %></td>
     <td><%= link_to 'Show', baseboard %></td>
-    <td><%= link_to 'Edit', edit_baseboard_path(baseboard) %></td>
-    <td><%= link_to 'Destroy', baseboard, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Baseboard', new_baseboard_path %>

@@ -8,7 +8,28 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="wrapper" class="container">
+    <header>
+      <h1><%= link_to "かにたま", {:controller => 'index'}, {:class => 'brand'} %></h1>
+      <div class="subnav">
+      <ul id="top_menu" class="nav nav-pills well">
+        <li><%= link_to "Host", {:controller => 'hosts'}, {:class => 'btn'} %></li>
+        <li><%= link_to "BIOS", {:controller => 'bioses'}, {:class => 'btn'} %></li>
+        <li><%= link_to "Processor", {:controller => 'processors'}, {:class => 'btn'} %></li>
+        <li><%= link_to "Baseboard", {:controller => 'baseboards'}, {:class => 'btn'} %></li>
+        <li><%= link_to "Memory", {:controller => 'memories'}, {:class => 'btn'} %></li>
+      </ul>
+      </div>
+    </header>
+
+    <div id="content">
+    <%= yield %>
+    </div><!-- content -->
+
+    <footer>
+        Created by <a href="https://github.com/cesare/kanitama/">kanitama</a>
+    </footer>
+</div>
 
 </body>
 </html>

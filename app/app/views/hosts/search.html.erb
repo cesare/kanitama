@@ -1,13 +1,14 @@
-<h1>Listing hosts</h1>
+<h1>Search Results</h1>
 
 <table class="table table-striped table-bordered">
   <thead>
   <tr>
     <th>Name</th>
+    <th>IP Address</th>
     <th>Bios Vendor</th>
-	<th>Processor Manifacture</th>
-	<th>Processor Speed</th>
-	<th>Baseboard</th>
+	<th>Processor Family</th>
+	<th>Processor Version</th>
+	<th>Baseboard Serial Number</th>
 	<th>Memory</th>
     <th></th>
     <th></th>
@@ -24,15 +25,12 @@
 <% @hosts.each do |host| %>
   <tr>
     <td><%= host.name %></td>
+    <td><%= host.ipaddress %></td>
 	<td><% if host.bios != nil %><%= host.bios.bios_vendor %><% end %></td>
-	<td><% if host.processor != nil %><%= host.processor.processor_manufacturer %><% end %></td>
-	<td><% if host.processor != nil %><%= host.processor.processor_max_speed %><% end %></td>
-	<td><% if host.baseboard != nil %><%= host.baseboard.baseboard_product_name %><% end %></td>
-	<td><% if host.baseboard != nil && host.baseboard.memories != nil
-			 host.baseboard.memories.each do |memory|%>
-		<%= memory.memory_size %>,
-		<% end %>
-	<% end %></td>
+	<td><% if host.processor != nil %><%= host.processor.processor_family %><% end %></td>
+	<td><% if host.processor != nil %><%= host.processor.processor_version %><% end %></td>
+	<td><% if host.baseboard != nil %><%= host.baseboard.baseboard_serial_number %><% end %></td>
+	<td><% if host.baseboard != nil %><%= host.baseboard.memories.map(&:memory_size).join(', ') %><% end %></td>
     <td><%= link_to 'Show', host %></td>
     <td><%= link_to 'Edit', edit_host_path(host) %></td>
     <td><%= link_to 'Destroy', host, confirm: 'Are you sure?', method: :delete %></td>

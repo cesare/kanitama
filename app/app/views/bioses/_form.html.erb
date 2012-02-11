@@ -12,20 +12,36 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :host_id %><br />
-    <%= f.number_field :host_id %>
+    <div class="clearfix">
+    <%= f.label :host_id %>
+      <div class="input">
+      <%= f.number_field :host_id %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :bios_release_date %><br />
-    <%= f.date_select :bios_release_date %>
+    <div class="clearfix">
+    <%= f.label :bios_release_date %>
+      <div class="input">
+      <%= f.date_select :bios_release_date %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :bios_vendor %><br />
-    <%= f.text_field :bios_vendor %>
+    <div class="clearfix">
+    <%= f.label :bios_vendor %>
+      <div class="input">
+      <%= f.text_field :bios_vendor %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :bios_version %><br />
-    <%= f.text_field :bios_version %>
+    <div class="clearfix">
+    <%= f.label :bios_version %>
+      <div class="input">
+      <%= f.text_field :bios_version %>
+      </div>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>
