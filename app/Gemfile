@@ -44,5 +44,9 @@ group :development do
   gem 'capistrano_colors'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 gem 'execjs'
 gem 'therubyracer'
