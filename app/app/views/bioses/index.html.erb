@@ -7,8 +7,6 @@
     <th>Bios vendor</th>
     <th>Bios version</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @bioses.each do |bios| %>
@@ -18,12 +16,9 @@
     <td><%= bios.bios_vendor %></td>
     <td><%= bios.bios_version %></td>
     <td><%= link_to 'Show', bios %></td>
-    <td><%= link_to 'Edit', edit_bios_path(bios) %></td>
-    <td><%= link_to 'Destroy', bios, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Bios', new_bios_path %>
