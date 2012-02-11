@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Host:</b>
+  <%= @processor.host_id %>
+</p>
+
+<p>
+  <b>Processor family:</b>
+  <%= @processor.processor_family %>
+</p>
+
+<p>
+  <b>Processor version:</b>
+  <%= @processor.processor_version %>
+</p>
+
+<p>
+  <b>Processor signature:</b>
+  <%= @processor.processor_signature %>
+</p>
+
+<p>
+  <b>Processor manufacturer:</b>
+  <%= @processor.processor_manufacturer %>
+</p>
+
+<p>
+  <b>Processor max speed:</b>
+  <%= @processor.processor_max_speed %>
+</p>
+
+<p>
+  <b>Processor:</b>
+  <%= @processor.processor_id %>
+</p>
+
+<p>
+  <b>Processor core count:</b>
+  <%= @processor.processor_core_count %>
+</p>
+
+<p>
+  <b>Processor core enabled:</b>
+  <%= @processor.processor_core_enabled %>
+</p>
+
+
+<%= link_to 'Edit', edit_processor_path(@processor) %> |
+<%= link_to 'Back', processors_path %>

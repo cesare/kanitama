@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  host_id: 1
+  processor_family: MyString
+  processor_version: MyString
+  processor_signature: MyString
+  processor_manufacturer: MyString
+  processor_max_speed: 1
+  processor_id: MyString
+  processor_core_count: 1
+  processor_core_enabled: 1
+
+two:
+  host_id: 1
+  processor_family: MyString
+  processor_version: MyString
+  processor_signature: MyString
+  processor_manufacturer: MyString
+  processor_max_speed: 1
+  processor_id: MyString
+  processor_core_count: 1
+  processor_core_enabled: 1

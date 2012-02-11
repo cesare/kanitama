@@ -1,0 +1,39 @@
+<h1>Listing processors</h1>
+
+<table>
+  <tr>
+    <th>Host</th>
+    <th>Processor family</th>
+    <th>Processor version</th>
+    <th>Processor signature</th>
+    <th>Processor manufacturer</th>
+    <th>Processor max speed</th>
+    <th>Processor</th>
+    <th>Processor core count</th>
+    <th>Processor core enabled</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @processors.each do |processor| %>
+  <tr>
+    <td><%= processor.host_id %></td>
+    <td><%= processor.processor_family %></td>
+    <td><%= processor.processor_version %></td>
+    <td><%= processor.processor_signature %></td>
+    <td><%= processor.processor_manufacturer %></td>
+    <td><%= processor.processor_max_speed %></td>
+    <td><%= processor.processor_id %></td>
+    <td><%= processor.processor_core_count %></td>
+    <td><%= processor.processor_core_enabled %></td>
+    <td><%= link_to 'Show', processor %></td>
+    <td><%= link_to 'Edit', edit_processor_path(processor) %></td>
+    <td><%= link_to 'Destroy', processor, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Processor', new_processor_path %>
