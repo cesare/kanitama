@@ -33,9 +33,9 @@
 		<%= memory.memory_size %>,
 		<% end %>
 	<% end %></td>
-    <td><%= link_to 'Show', host %></td>
-    <td><%= link_to 'Edit', edit_host_path(host) %></td>
-    <td><%= link_to 'Destroy', host, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', host, :class => 'btn btn-info'%></td>
+    <td><%= link_to 'Edit', edit_host_path(host), :class => 'btn btn-primary' %></td>
+    <td><%= link_to 'Destroy', host, {confirm: 'Are you sure?',method: :delete, :class => 'btn btn-danger' } %></td>
   </tr>
 <% end %>
 </table>
