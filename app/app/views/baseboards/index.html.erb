@@ -1,6 +1,7 @@
 <h1>Listing baseboards</h1>
 
-<table>
+<table class="table table-striped table-bordered">
+  <thead>
   <tr>
     <th>Host</th>
     <th>Baseboard product name</th>
@@ -14,6 +15,7 @@
     <th></th>
     <th></th>
   </tr>
+  </thead>
 
 <% @baseboards.each do |baseboard| %>
   <tr>
@@ -34,4 +36,4 @@
 
 <br />
 
-<%= link_to 'New Baseboard', new_baseboard_path %>
+<%= link_to 'New Baseboard', new_baseboard_path, {:class => 'btn'} %>

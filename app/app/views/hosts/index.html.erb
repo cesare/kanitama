@@ -1,25 +1,28 @@
 <h1>Listing hosts</h1>
 
-<table>
+<table class="table table-striped table-bordered">
+  <thead>
   <tr>
-    <th>Ipaddress</th>
     <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Ipaddress</th>
+    <th>Baseboard</th>
+    <th>Bios</th>
+    <th>Processor</th>
+    <th>Memory</th>
   </tr>
+  </thead>
 
 <% @hosts.each do |host| %>
   <tr>
-    <td><%= host.ipaddress %></td>
     <td><%= host.name %></td>
-    <td><%= link_to 'Show', host %></td>
-    <td><%= link_to 'Edit', edit_host_path(host) %></td>
-    <td><%= link_to 'Destroy', host, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= host.ipaddress %></td>
+    <td><%= host.bios %></td>
+    <td><%= host.processors %></td>
+    <td><%= host.memory %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Host', new_host_path %>
+<%= link_to 'Add New Host', new_host_path, :class => 'btn' %>

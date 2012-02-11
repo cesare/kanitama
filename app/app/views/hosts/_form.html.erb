@@ -12,12 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :ipaddress %><br />
-    <%= f.text_field :ipaddress %>
+    <div class="clearfix">
+      <%= f.label :ipaddress %>
+      <div class="input">
+      <%= f.text_field :ipaddress %>
+      </div>
   </div>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <div class="clearfix">
+      <%= f.label :name %>
+      <div class="input">
+      <%= f.text_field :name %>
+      </div>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>

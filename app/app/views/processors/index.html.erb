@@ -1,6 +1,7 @@
 <h1>Listing processors</h1>
 
-<table>
+<table class="table table-striped table-bordered">
+  <thead>
   <tr>
     <th>Host</th>
     <th>Processor family</th>
@@ -15,6 +16,7 @@
     <th></th>
     <th></th>
   </tr>
+  </thead>
 
 <% @processors.each do |processor| %>
   <tr>
@@ -36,4 +38,4 @@
 
 <br />
 
-<%= link_to 'New Processor', new_processor_path %>
+<%= link_to 'New Processor', new_processor_path, {:class => 'btn'} %>
