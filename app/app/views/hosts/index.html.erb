@@ -1,8 +1,8 @@
 <h1>Listing hosts</h1>
 
-<table>
+<table class="table table-striped table-bordered">
+  <thead>
   <tr>
-    <th>Ipaddress</th>
     <th>Name</th>
     <th>Bios Vendor</th>
 	<th>Processor Manifacture</th>
@@ -13,16 +13,16 @@
     <th></th>
     <th></th>
   </tr>
+  </thead>
 
 <%= form_tag(search_hosts_path, :method => :get) do %>
   <%= label_tag(:q, "Search for:") %>
   <%= text_field_tag(:q, params[:q]) %>
-  <%= submit_tag("Search") %>
+  <%= submit_tag("Search", {:class => 'btn'}) %>
 <% end %>
 
 <% @hosts.each do |host| %>
   <tr>
-    <td><%= host.ipaddress %></td>
     <td><%= host.name %></td>
 	<td><% if host.bios != nil %><%= host.bios.bios_vendor %><% end %></td>
 	<td><% if host.processor != nil %><%= host.processor.processor_manufacturer %><% end %></td>
@@ -42,4 +42,4 @@
 
 <br />
 
-<%= link_to 'New Host', new_host_path %>
+<%= link_to 'Add New Host', new_host_path, :class => 'btn' %>

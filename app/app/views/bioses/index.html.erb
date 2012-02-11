@@ -1,6 +1,7 @@
 <h1>Listing bioses</h1>
 
-<table>
+<table class="table table-striped table-bordered">
+  <thead>
   <tr>
     <th>Host</th>
     <th>Bios release date</th>
@@ -8,6 +9,7 @@
     <th>Bios version</th>
     <th></th>
   </tr>
+  </thead>
 
 <% @bioses.each do |bios| %>
   <tr>
@@ -22,3 +24,7 @@
 
 <br />
 
+<<<<<<< HEAD
+<%= link_to 'New Bios', new_bios_path, {:class => 'btn'} %>
+=======
+>>>>>>> 9167c1ba0f1ab924ab40b38e7dc021fa0343b985
