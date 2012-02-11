@@ -1,7 +1,19 @@
 class HostsController < ApplicationController
   def search
     keyword = "%#{params[:q]}%"
-    @hosts = Host.where('name like :keyword OR ipaddress like :keyword', { :keyword => keyword })
+    
+    host = Host.arel_table
+    board = Baseboard.arel_table
+    processor = Processor.arel_table
+    
+    query =
+      host[:name].matches(keyword)
+      .or(host[:ipaddress].matches(keyword))
+      .or(board[:baseboard_serial_number].matches(keyword))
+      .or(processor[:processor_family].matches(keyword))
+      .or(processor[:processor_version].matches(keyword))
+    
+    @hosts = Host.joins(:bios, :baseboard, :processor).where(query)
     render :index
   end
   
