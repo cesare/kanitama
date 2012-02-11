@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211010517) do
+ActiveRecord::Schema.define(:version => 20120211015639) do
 
   create_table "baseboards", :force => true do |t|
     t.integer  "host_id"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(:version => 20120211010517) do
     t.string   "processor_version"
     t.string   "processor_signature"
     t.string   "processor_manufacturer"
-    t.integer  "processor_max_speed"
+    t.string   "processor_max_speed"
     t.string   "processor_id"
     t.integer  "processor_core_count"
     t.integer  "processor_core_enabled"

@@ -5,6 +5,8 @@
     <th>Ipaddress</th>
     <th>Name</th>
     <th>Bios Vendor</th>
+	<th>Processor Manifacture</th>
+	<th>Processor Speed</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +17,8 @@
     <td><%= host.ipaddress %></td>
     <td><%= host.name %></td>
 	<td><% if host.bios != nil %><%= host.bios.bios_vendor %><% end %></td>
+	<td><% if host.processor != nil %><%= host.processor.processor_manufacturer %><% end %></td>
+	<td><% if host.processor != nil %><%= host.processor.processor_max_speed %><% end %></td>
     <td><%= link_to 'Show', host %></td>
     <td><%= link_to 'Edit', edit_host_path(host) %></td>
     <td><%= link_to 'Destroy', host, confirm: 'Are you sure?', method: :delete %></td>
