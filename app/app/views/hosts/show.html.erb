@@ -1,15 +1,140 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Ipaddress:</b>
-  <%= @host.ipaddress %>
-</p>
-
-<p>
   <b>Name:</b>
   <%= @host.name %>
 </p>
 
+<p>
+  <b>IP address:</b>
+  <%= @host.ipaddress %>
+</p>
+
+<div>
+  <p>BIOS</p>
+  <% if @host.bios %>
+  <p>
+    <b>release date:</b>
+    <%= @host.bios.bios_release_date %>
+  </p>
+  <p>
+    <b>vendor:</b>
+    <%= @host.bios.bios_vendor %>
+  </p>
+  <p>
+    <b>version:</b>
+    <%= @host.bios.bios_version %>
+  </p>
+  <% end %>
+</div>
+
+<div>
+  <p>Processor</p>
+  <% if @host.processor %>
+  <p>
+    <b>Processor family:</b>
+    <%= @host.processor.processor_family %>
+  </p>
+
+  <p>
+    <b>Processor version:</b>
+    <%= @host.processor.processor_version %>
+  </p>
+
+  <p>
+    <b>Processor signature:</b>
+    <%= @host.processor.processor_signature %>
+  </p>
+
+  <p>
+    <b>Processor manufacturer:</b>
+    <%= @host.processor.processor_manufacturer %>
+  </p>
+
+  <p>
+    <b>Processor max speed:</b>
+    <%= @host.processor.processor_max_speed %>
+  </p>
+
+  <p>
+    <b>Processor:</b>
+    <%= @host.processor.processor_id %>
+  </p>
+
+  <p>
+    <b>Processor core count:</b>
+    <%= @host.processor.processor_core_count %>
+  </p>
+
+  <p>
+    <b>Processor core enabled:</b>
+    <%= @host.processor.processor_core_enabled %>
+  </p>
+  <% end %>
+</div>
+
+<div>
+  <p>Baseboard</p>
+  <% if @host.baseboard %>
+  <p>
+    <b>Baseboard product name:</b>
+    <%= @host.baseboard.baseboard_product_name %>
+  </p>
+
+  <p>
+    <b>Baseboard serial number:</b>
+    <%= @host.baseboard.baseboard_serial_number %>
+  </p>
+
+  <p>
+    <b>Baseboard version:</b>
+    <%= @host.baseboard.baseboard_version %>
+  </p>
+
+  <p>
+    <b>Baseboard description:</b>
+    <%= @host.baseboard.baseboard_description %>
+  </p>
+
+  <p>
+    <b>System uuid:</b>
+    <%= @host.baseboard.system_uuid %>
+  </p>
+
+  <p>
+    <b>Memory maximum capacity:</b>
+    <%= @host.baseboard.memory_maximum_capacity %>
+  </p>
+
+  <p>
+    <b>Memory number of devices:</b>
+    <%= @host.baseboard.memory_number_of_devices %>
+  </p>
+  <% end %>
+</div>
+
+<div>
+  <p>Memories</p>
+  <% if @host.baseboard %>
+  <%   @host.baseboard.memories.each_with_index do |memory, i| %>
+  <p>Memory <%= i + 1 %></p>
+  <p>
+    <b>Memory size:</b>
+    <%= memory.memory_size %>
+  </p>
+
+  <p>
+    <b>Memory speed:</b>
+    <%= memory.memory_speed %>
+  </p>
+
+  <p>
+    <b>Memory type:</b>
+    <%= memory.memory_type %>
+  </p>
+  <%   end %>
+  <% end %>
+</div>
 
 <%= link_to 'Edit', edit_host_path(@host) %> |
 <%= link_to 'Back', hosts_path %>
