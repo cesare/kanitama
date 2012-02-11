@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211004352) do
+ActiveRecord::Schema.define(:version => 20120211010040) do
+
+  create_table "baseboards", :force => true do |t|
+    t.integer  "host_id"
+    t.string   "baseboard_product_name"
+    t.string   "baseboard_serial_number"
+    t.string   "baseboard_version"
+    t.string   "baseboard_description"
+    t.string   "system_uuid"
+    t.string   "memory_maximum_capacity"
+    t.integer  "memory_number_of_devices"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
 
   create_table "bioses", :force => true do |t|
     t.integer  "host_id"

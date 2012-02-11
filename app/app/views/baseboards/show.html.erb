@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Host:</b>
+  <%= @baseboard.host_id %>
+</p>
+
+<p>
+  <b>Baseboard product name:</b>
+  <%= @baseboard.baseboard_product_name %>
+</p>
+
+<p>
+  <b>Baseboard serial number:</b>
+  <%= @baseboard.baseboard_serial_number %>
+</p>
+
+<p>
+  <b>Baseboard version:</b>
+  <%= @baseboard.baseboard_version %>
+</p>
+
+<p>
+  <b>Baseboard description:</b>
+  <%= @baseboard.baseboard_description %>
+</p>
+
+<p>
+  <b>System uuid:</b>
+  <%= @baseboard.system_uuid %>
+</p>
+
+<p>
+  <b>Memory maximum capacity:</b>
+  <%= @baseboard.memory_maximum_capacity %>
+</p>
+
+<p>
+  <b>Memory number of devices:</b>
+  <%= @baseboard.memory_number_of_devices %>
+</p>
+
+
+<%= link_to 'Edit', edit_baseboard_path(@baseboard) %> |
+<%= link_to 'Back', baseboards_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  host_id: 1
+  baseboard_product_name: MyString
+  baseboard_serial_number: MyString
+  baseboard_version: MyString
+  baseboard_description: MyString
+  system_uuid: MyString
+  memory_maximum_capacity: MyString
+  memory_number_of_devices: 1
+
+two:
+  host_id: 1
+  baseboard_product_name: MyString
+  baseboard_serial_number: MyString
+  baseboard_version: MyString
+  baseboard_description: MyString
+  system_uuid: MyString
+  memory_maximum_capacity: MyString
+  memory_number_of_devices: 1

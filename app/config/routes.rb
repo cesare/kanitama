@@ -1,4 +1,6 @@
 Kanitama::Application.routes.draw do
+  resources :baseboards
+
   resources :processors
 
   get "index/index"
